@@ -1,4 +1,4 @@
-import 'package:education/screen/books.dart';
+import 'package:education/screen/books_page.dart';
 import 'package:flutter/material.dart';
 
 class StudentList extends StatefulWidget {
@@ -10,15 +10,15 @@ class StudentList extends StatefulWidget {
 
 class _StudentListState extends State<StudentList> {
   List<String> items = <String>[
-    'Class 3',
-    'Class 4',
-    'Class 5',
-    'Class 6',
-    'Class 7',
-    'Class 8',
-    'Class 9',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
   ];
-  String dropdownValue = 'Class 3';
+  String dropdownValue = '3';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +59,7 @@ class _StudentListState extends State<StudentList> {
                         return DropdownMenuItem<String>(
                           value: value,
                           child: Text(
-                            value,
+                            "Class $value",
                             style: const TextStyle(
                                 color: Color(0xff11171c), fontSize: 20),
                           ),
@@ -73,8 +73,12 @@ class _StudentListState extends State<StudentList> {
             padding: const EdgeInsets.symmetric(vertical: 70),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Books()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => BooksPage(
+                              className: dropdownValue,
+                            )));
               },
               child: const Text(
                 'Go',

@@ -1,5 +1,6 @@
-import 'package:education/screen/homepage.dart';
+import 'package:education/screen/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -53,22 +54,22 @@ class Welcome extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Homepage()));
+                            builder: (context) => const HomePage()));
                   },
-                  child: const Text(
+                  child: Text(
                     "Get Start",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(fontSize: 20.sp, color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 30),
+                      padding: EdgeInsets.symmetric(
+                          vertical: 10.h, horizontal: 30.w),
                       primary: const Color(0xff00b9be),
                       shape: const StadiumBorder(),
                       elevation: 20),
                 ),
               ),
               Container(
-                height: 110,
+                height: 110.h,
               )
             ],
           ),

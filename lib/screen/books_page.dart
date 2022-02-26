@@ -1,4 +1,10 @@
 import 'package:education/screen/class%20page/class3.dart';
+import 'package:education/screen/class%20page/class4.dart';
+import 'package:education/screen/class%20page/class5.dart';
+import 'package:education/screen/class%20page/class6.dart';
+import 'package:education/screen/class%20page/class7.dart';
+import 'package:education/screen/class%20page/class8.dart';
+import 'package:education/screen/class%20page/class9.dart';
 import 'package:education/screen/widgets/books_card.dart';
 import 'package:flutter/material.dart';
 
@@ -40,17 +46,57 @@ class _BooksPageState extends State<BooksPage> {
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GridView(
-            children: List.generate(
-                12,
-                (index) => BooksCard(
-                    image: 'assets/images/class${widget.className}.jpg',
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Class3()));
-                    },
-                    title: 'Class ${widget.className}')),
+            children: [
+              BooksCard(
+                  image: 'assets/images/class3.png',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Class3()));
+                  },
+                  title: 'Class 3'),
+              BooksCard(
+                  image: 'assets/images/class4.png',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Class4()));
+                  },
+                  title: 'Class 4'),
+              BooksCard(
+                  image: 'assets/images/class5.png',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Class5()));
+                  },
+                  title: 'Class 5'),
+              BooksCard(
+                  image: 'assets/images/class6.png',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Class6()));
+                  },
+                  title: 'Class 6'),
+              BooksCard(
+                  image: 'assets/images/class7.png',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Class7()));
+                  },
+                  title: 'Class 7'),
+              BooksCard(
+                  image: 'assets/images/class8.png',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Class8()));
+                  },
+                  title: 'Class 8'),
+              BooksCard(
+                  image: 'assets/images/class10.png',
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Class9()));
+                  },
+                  title: 'Class 9 & 10'),
+            ],
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
           ),

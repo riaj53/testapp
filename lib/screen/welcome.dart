@@ -14,7 +14,7 @@ class Welcome extends StatelessWidget {
           Container(
             height: 630,
             decoration: const BoxDecoration(
-                color: Color(0xff11171c),
+                color: Color.fromARGB(255, 17, 24, 31),
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(50),
                     bottomRight: Radius.circular(50))),

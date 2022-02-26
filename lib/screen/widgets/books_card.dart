@@ -34,6 +34,8 @@ class BooksCard extends StatelessWidget {
               ),
             ),
           ),
-        ));
+          
+        ),
+        );
   }
 }
